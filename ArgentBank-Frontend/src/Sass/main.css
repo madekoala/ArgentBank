@@ -47,22 +47,22 @@ footer p {
 }
 
 .introduction {
-  background-image: url("../../assets/bank-tree.jpeg");
+  background-image: url("../assets/bank-tree.jpeg");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: 0 -50px;
-  position: relative;
   height: 300px;
-  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .introduction section {
-  background: white;
-  position: relative;
-  top: 2rem;
-  width: 200px;
+  background-color: white;
   padding: 2rem;
   text-align: left;
-  margin: 0 auto;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 .introduction section h2 {
   visibility: hidden;
