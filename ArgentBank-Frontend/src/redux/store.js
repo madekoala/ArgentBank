@@ -2,24 +2,24 @@
 /* global localStorage */
 /* eslint no-undef: "error" */
 
-import { createStore, applyMiddleware } from 'redux'
-import { reducer } from './reducer'
-import thunkMiddleware from 'redux-thunk'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { createStore, applyMiddleware } from "redux";
+import { reducer } from "./reducer";
+import { thunk } from "redux-thunk";
+import { composeWithDevTools } from "@redux-devtools/extension";
 
 // État initial de l'application
 export const initialeState = {
   users: null,
   connected: false,
-  status: 'void',
+  status: "void",
   user: {
-    UserName: ' ',
-    prenom: ' ',
-    nom: ' '
+    UserName: " ",
+    prenom: " ",
+    nom: " ",
   },
-  token: '',
-  error: null
-}
+  token: "",
+  error: null,
+};
 
 /**
  * Fonction saveToLocalStorage
@@ -29,11 +29,11 @@ export const initialeState = {
 function saveToLocalStorage(state) {
   try {
     // Sérialise l'état en JSON avant de le sauvegarder dans le localStorage
-    const serialisedState = JSON.stringify(state)
-    localStorage.setItem('persistantState', serialisedState)
+    const serialisedState = JSON.stringify(state);
+    localStorage.setItem("persistantState", serialisedState);
   } catch (e) {
     // En cas d'erreur lors de la sauvegarde, affiche un avertissement
-    console.warn(e)
+    console.warn(e);
   }
 }
 
@@ -44,27 +44,27 @@ function saveToLocalStorage(state) {
 function loadFromLocalStorage() {
   try {
     // Récupère l'état sérialisé depuis le localStorage
-    const serialisedState = localStorage.getItem('persistantState')
+    const serialisedState = localStorage.getItem("persistantState");
 
     // Si aucun état n'est trouvé, renvoie "undefined"
-    if (serialisedState === null) return undefined
+    if (serialisedState === null) return undefined;
 
     // Sinon, désérialise l'état depuis le JSON et le renvoie
-    return JSON.parse(serialisedState)
+    return JSON.parse(serialisedState);
   } catch (e) {
     // En cas d'erreur lors du chargement, affiche un avertissement et renvoie "undefined"
-    console.warn(e)
-    return undefined
+    console.warn(e);
+    return undefined;
   }
 }
 
 // Middleware de Redux - Asynchrone car appel API
-const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
+const composedEnhancer = composeWithDevTools(applyMiddleware(thunk));
 
 // Création du store avec le reducer, l'état initial chargé depuis le localStorage et le middleware
-const store = createStore(reducer, loadFromLocalStorage(), composedEnhancer)
+const store = createStore(reducer, loadFromLocalStorage(), composedEnhancer);
 
 // Abonnement au store pour sauvegarder l'état dans le localStorage à chaque changement
-store.subscribe(() => saveToLocalStorage(store.getState()))
+store.subscribe(() => saveToLocalStorage(store.getState()));
 
-export default store
+export default store;

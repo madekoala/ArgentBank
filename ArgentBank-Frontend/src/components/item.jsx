@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types'
+import React from 'react'
+
 
 /**
  * @param {String} image image of introduce information

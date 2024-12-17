@@ -2,6 +2,8 @@ import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import { updateUserInfo } from '../redux/action'
 import store from '../redux/store'
+import React from 'react'
+
 
 function Information() {
   // État local pour gérer le mode d'édition

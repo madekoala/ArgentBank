@@ -1,9 +1,11 @@
 import iconChat from "../assets/icon-chat.png";
 import iconMoney from "../assets/icon-money.png";
 import iconSecurity from "../assets/icon-security.png";
+import Footer from "../components/footer";
 import Header from "../components/header";
 import Introduction from "../components/introduction";
 import Item from "../components/item";
+import React from "react";
 
 /**
  * The Home Page

@@ -5,6 +5,8 @@ import Information from "../components/information";
 import Compte from "../components/compte";
 import Footer from "../components/footer";
 import Connexion from "./connexion";
+import React from 'react'
+
 
 /**
  * The User Page

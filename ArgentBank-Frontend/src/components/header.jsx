@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { deconnexion } from '../redux/action'
 import store from '../redux/store'
 import { useEffect } from 'react'
+import React from 'react'
 
 /**
  * an element Header HTML

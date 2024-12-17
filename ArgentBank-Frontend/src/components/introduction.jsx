@@ -1,3 +1,4 @@
+import React from 'react'
 /**
  * the Introduction component
  * introduce the Argent Bank

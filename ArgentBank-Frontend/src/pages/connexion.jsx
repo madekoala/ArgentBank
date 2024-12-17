@@ -1,6 +1,7 @@
 import Footer from "../components/footer";
 import Formulaire from "../components/formulaire";
 import Header from "../components/header";
+import React from "react";
 
 /**
  * The Connexion Page

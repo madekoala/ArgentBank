@@ -1,3 +1,5 @@
+import React from 'react'
+
 /**
  * an element Footer HTML
  * with copyright of site
