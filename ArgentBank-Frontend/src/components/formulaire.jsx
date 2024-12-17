@@ -4,7 +4,7 @@
 /* eslint no-undef: "error" */
 
 import { useNavigate } from 'react-router-dom'
-import { login } from '../redux/action'
+import { login } from '../redux/store'
 import store from '../redux/store'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
