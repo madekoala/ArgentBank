@@ -1,0 +1,304 @@
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+header nav img {
+  max-width: 100%;
+  width: 200px;
+}
+header nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-right: 8px;
+}
+header nav a i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #00BC77;
+}
+header .connected {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .connected i, header .connected p {
+  margin-right: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 32px 0 24px;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.introduction {
+  background-image: url("../../assets/bank-tree.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
+  position: relative;
+  height: 300px;
+  color: #000;
+}
+.introduction section {
+  background: white;
+  position: relative;
+  top: 2rem;
+  width: 200px;
+  padding: 2rem;
+  text-align: left;
+  margin: 0 auto;
+}
+.introduction section h2 {
+  visibility: hidden;
+  margin: 0;
+  height: 0;
+}
+.introduction section .subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+.introduction section p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+.items .item {
+  padding: 40px;
+}
+.items .item img {
+  width: 100px;
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+  padding: 16px;
+}
+.items .item h3 {
+  color: #222;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+main section {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 2rem;
+  color: #00bc77;
+  border: 2px solid;
+  border-radius: 20px;
+  margin-bottom: 10svh;
+}
+main section form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+main section form .input-wrapper label {
+  font-weight: bold;
+}
+main section form .input-wrapper input {
+  padding: 5px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+main section form .input-wrapper input:active {
+  border: #00bc77;
+}
+main section form .input-remember {
+  display: flex;
+}
+main section form .input-remember label {
+  margin-left: 4px;
+  cursor: pointer;
+}
+main section form .sign-in-button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}
+
+.compte {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #3D3D3D;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.compte-montant {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.compte-description {
+  margin: 0;
+}
+.compte div {
+  width: 100%;
+  flex: 1;
+}
+.compte div h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.compte div button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  margin-bottom: 2rem;
+}
+.information button {
+  border: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px 50px;
+  margin: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.information button:hover {
+  transform: scale(1.05);
+}
+.information input[disabled] {
+  background-color: #E7E7E7;
+}
+.information input[disabled] {
+  color: #7C7C7C;
+}
+.information .input-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.information .input-name .user-name {
+  display: flex;
+}
+.information .input-name .user-nom {
+  display: flex;
+}
+.information .input-name .user-prenom {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+.accueil, .connexion, .user {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-color: #fff;
+  flex: 1;
+}
+
+.error {
+  color: red;
+}
+
+.information input {
+  width: 180px;
+  height: 35px;
+  margin: 10px;
+}
+.information .buttonEdit {
+  text-align: center;
+  vertical-align: middle;
+  margin: 10px;
+  width: 130px;
+  height: 35px;
+}
+
+@media (min-width: 920px) {
+  .introduction {
+    height: 400px;
+    background-position: 0% 33%;
+  }
+  .introduction section {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 300px;
+    margin: 2rem;
+  }
+  .introduction section p {
+    font-size: 1.2rem;
+  }
+  .introduction section .subtitle {
+    font-size: 1.5rem;
+  }
+  .items {
+    flex-direction: row;
+  }
+}
+@media (min-width: 720px) {
+  .compte {
+    flex-direction: row;
+  }
+  .compte .cta {
+    flex: 0;
+  }
+  .compte .cta button {
+    width: 200px;
+  }
+}/*# sourceMappingURL=main.css.map */

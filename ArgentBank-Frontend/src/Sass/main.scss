@@ -1,13 +1,13 @@
-@import "./Components/header";
-@import "./Components/footer";
-@import "./Components/introduction";
-@import "./Components/item";
-@import "./Components/formulaire";
-@import "./Components/compte";
-@import "./Components/information";
+@use "./components/header";
+@use "./components/footer";
+@use "./components/introduction";
+@use "./components/item";
+@use "./components/formulaire";
+@use "./components/compte";
+@use "./components/information";
 
-@import "./Pages/accueil";
-@import "./Pages/connexion";
-@import "./Pages/user";
+@use "./pages/accueil";
+@use "./pages/connexion";
+@use "./pages/user";
 
-@import "./Layout/responsive";
+@use "./layout/responsive.scss";

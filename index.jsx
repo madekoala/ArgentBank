@@ -6,8 +6,8 @@ import Connexion from "./ArgentBank-Frontend/src/pages/connexion";
 import User from "./ArgentBank-Frontend/src/pages/user";
 import { Provider } from "react-redux";
 import store from "./ArgentBank-Frontend/src/redux/store";
-import "./ArgentBank-Frontend/src/Sass";
-import history from "./redux/history";
+import "./ArgentBank-Frontend/src/Sass/main.scss"
+import history from "./ArgentBank-Frontend/src/redux/history";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
