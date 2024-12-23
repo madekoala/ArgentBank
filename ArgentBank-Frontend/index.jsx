@@ -1,13 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Accueil from "./ArgentBank-Frontend/src/pages/accueil";
-import Connexion from "./ArgentBank-Frontend/src/pages/connexion";
-import User from "./ArgentBank-Frontend/src/pages/user";
+import Accueil from "./src/pages/accueil";
+import Connexion from "./src/pages/connexion";
+import User from "./src/pages/user";
 import { Provider } from "react-redux";
-import store from "./ArgentBank-Frontend/src/redux/store";
-import "./ArgentBank-Frontend/src/Sass/main.scss"
-import history from "./ArgentBank-Frontend/src/redux/history";
+import store from "./src/redux/store";
+import "./src/Sass/main.scss";
+import history from "./src/redux/history";
 
 const container = document.getElementById("root");
 const root = createRoot(container);

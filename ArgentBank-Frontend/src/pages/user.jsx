@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Header from "../components/header";
-import Information from "../components/information";
 import Compte from "../components/compte";
 import Footer from "../components/footer";
 import Connexion from "./connexion";
-import React from 'react'
-
+import React from "react";
+import Header from "../components/header";
+import Information from "../components/information";
 
 /**
  * The User Page

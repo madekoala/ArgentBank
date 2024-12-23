@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-
+import PropTypes from "prop-types";
+import React from "react";
 
 /**
  * @param {String} titre title of account
@@ -9,26 +8,28 @@ import React from 'react'
  * @component
  */
 
-function Compte ({ titre, montant, description }) {
-  
+function Compte({ titre, montant, description }) {
   return (
-    <section className='compte'>
+    <section className="compte">
       <div>
         <h3> {titre} </h3>
-        <p className='compte-montant'> {montant} </p>
-        <p className='compte-description'> {description} </p>
+        <p className="compte-montant"> {montant} </p>
+        <p className="compte-description"> {description} </p>
       </div>
-      <div className='cta'>
-        <button className='buttonTrans' onClick={() => console.log("g")}> View transactions </button>
+      <div className="cta">
+        <button className="buttonTrans" onClick={() => console.log("g")}>
+          {" "}
+          View transactions{" "}
+        </button>
       </div>
     </section>
-  )
+  );
 }
 
 Compte.propTypes = {
   titre: PropTypes.string.isRequired,
   montant: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
-}
+  description: PropTypes.string.isRequired,
+};
 
-export default Compte
+export default Compte;
