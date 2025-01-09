@@ -18,7 +18,7 @@ function Formulaire() {
   const navigate = useNavigate();
   const statutReq = useSelector((state) => state.status);
   let rememberMe = document.getElementById("remember-me");
-  let email = document.getElementById("email");
+  let username = document.getElementById("username");
   let password = document.getElementById("password");
   let form = document.getElementsByTagName("form")[0];
   let divInputUsername = document.getElementsByClassName("input-wrapper")[0];
@@ -55,24 +55,24 @@ function Formulaire() {
 
   function connexion(e) {
     e.preventDefault();
-    email = document.getElementById("email");
+    username = document.getElementById("username");
     password = document.getElementById("password");
-    console.log(email.value, password.value);
-    // Vérifie que les champs email et mot de passe ne sont pas vides avant de lancer la connexion.
-    if (email.value !== "" || password.value !== "") {
+    console.log(username.value, password.value);
+    // Vérifie que les champs username et mot de passe ne sont pas vides avant de lancer la connexion.
+    if (username.value !== "" || password.value !== "") {
       // Dispatch de l'action de connexion avec les informations saisies par l'utilisateur.
-      store.dispatch(login(email.value, password.value));
+      store.dispatch(login(username.value, password.value));
     }
   }
 
   function sauvegarderSession() {
     try {
-      email = document.getElementById("email");
+      username = document.getElementById("username");
       password = document.getElementById("password");
-      // Vérifie que les champs email et mot de passe ne sont pas vides avant de sauvegarder les informations de session.
-      if (email !== (undefined, null) || password !== (undefined, null)) {
+      // Vérifie que les champs username et mot de passe ne sont pas vides avant de sauvegarder les informations de session.
+      if (username !== (undefined, null) || password !== (undefined, null)) {
         // Sauvegarde les informations de session dans le sessionStorage.
-        sessionStorage.setItem("email", email.value);
+        sessionStorage.setItem("username", username.value);
         sessionStorage.setItem("password", password.value);
         sessionStorage.setItem("rememberMe", rememberMe.checked);
       }
@@ -99,21 +99,21 @@ function Formulaire() {
 
   function recupererSession() {
     try {
-      email = document.getElementById("email");
+      username = document.getElementById("username");
       password = document.getElementById("password");
       rememberMe = document.getElementById("remember-me");
       divInputUsername = document.getElementsByClassName("input-wrapper")[0];
       // Récupère les informations de session depuis le sessionStorage et les restaure dans le formulaire.
-      if (email !== (undefined, null) || password !== (undefined, null)) {
-        email.value = sessionStorage.getItem("email");
+      if (username !== (undefined, null) || password !== (undefined, null)) {
+        username.value = sessionStorage.getItem("username");
         password.value = sessionStorage.getItem("password");
         rememberMe.checked = sessionStorage.getItem("rememberMe");
         // Crée la liste des utilisateurs enregistrés dans le formulaire s'il y a des informations de session sauvegardées.
         let dataList = document.getElementById("usernames");
-        if (dataList === (undefined, null) && email.value !== "") {
+        if (dataList === (undefined, null) && username.value !== "") {
           dataList = document.createElement("datalist");
           const optionUsername = document.createElement("option");
-          optionUsername.value = email.value;
+          optionUsername.value = username.value;
           dataList.id = "usernames";
           divInputUsername.appendChild(dataList);
           dataList.appendChild(optionUsername);
@@ -132,7 +132,7 @@ function Formulaire() {
       <form>
         <div className="input-wrapper">
           <label htmlFor="username">Username:</label>
-          <input type="text" list="usernames" id="email" required />
+          <input type="text" list="usernames" id="username" required />
         </div>
         <div className="input-wrapper">
           <label htmlFor="password">Password:</label>

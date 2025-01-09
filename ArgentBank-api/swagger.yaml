@@ -1,62 +1,14 @@
-swagger: "2.0"
+swagger: '2.0'
 info:
   title: Bank Argent API documentation
   description: Contains all available API endpoints in this codebase
-  version: "1.0.0"
-  termsOfService: "http://swagger.io/terms/"
+  version: '1.0.0'
+  termsOfService: 'http://swagger.io/terms/'
 host: localhost:3001
 basePath: /api/v1
 schemes:
   - https
 paths:
-  /user/login:
-    post:
-      tags:
-        - User Module
-      summary: Login
-      description: API for Login
-      parameters:
-        - in: body
-          name: body
-          description: Login Payload
-          required: true
-          schema:
-            $ref: "#/definitions/Login"
-      produces:
-        - application/json
-      responses:
-        "200":
-          description: Login Successfully
-          schema:
-            $ref: "#/definitions/LoginResponse"
-        "400":
-          description: Invalid Fields
-        "500":
-          description: Internal Server Error
-  /user/signup:
-    post:
-      tags:
-        - User Module
-      summary: Signup
-      description: API for Signup
-      parameters:
-        - in: body
-          name: body
-          description: Signup Payload
-          required: true
-          schema:
-            $ref: "#/definitions/User"
-      produces:
-        - application/json
-      responses:
-        "200":
-          description: Signup Successfully
-          schema:
-            $ref: "#/definitions/ApiResponse"
-        "400":
-          description: Invalid Fields
-        "500":
-          description: Internal Server Error
   /account/{accountId}/transactions:
     get:
       security:
@@ -79,13 +31,13 @@ paths:
       produces:
         - application/json
       responses:
-        "200":
+        '200':
           description: Transactions Successfully
           schema:
-            $ref: "#/definitions/TransactionsResponse"
-        "400":
+            $ref: '#/definitions/TransactionsResponse'
+        '400':
           description: Invalid Fields
-        "500":
+        '500':
           description: Internal Server Error
   /account/{accountId}/transaction/{id}:
     get:
@@ -114,13 +66,13 @@ paths:
       produces:
         - application/json
       responses:
-        "200":
+        '200':
           description: Transaction Successfully
           schema:
-            $ref: "#/definitions/TransactionResponse"
-        "400":
+            $ref: '#/definitions/TransactionResponse'
+        '400':
           description: Invalid Fields
-        "500":
+        '500':
           description: Internal Server Error
     put:
       security:
@@ -150,68 +102,26 @@ paths:
           description: Transaction changement
           required: true
           schema:
-            $ref: "#/definitions/TransactionResponse"
+            $ref: '#/definitions/TransactionResponse'
       produces:
         - application/json
       responses:
-        "200":
+        '200':
           description: Transaction Successfully
           schema:
-            $ref: "#/definitions/TransactionResponse"
-        "400":
+            $ref: '#/definitions/TransactionResponse'
+        '400':
           description: Invalid Fields
-        "500":
+        '500':
           description: Internal Server Error
+
 securityDefinitions:
   Bearer:
     type: apiKey
     name: Authorization
     in: header
+
 definitions:
-  User:
-    properties:
-      email:
-        type: string
-        description: user email
-      password:
-        type: string
-        description: user password
-      firstName:
-        type: string
-        description: user first name
-      lastName:
-        type: string
-        description: user last name
-      userName:
-        type: string
-        description: user public name
-  Login:
-    properties:
-      email:
-        type: string
-        description: user email
-      password:
-        type: string
-        description: user password
-  ApiResponse:
-    type: object
-    properties:
-      status:
-        type: integer
-      message:
-        type: string
-      body:
-        type: object
-        properties:
-          id:
-            type: string
-          email:
-            type: string
-  LoginResponse:
-    type: object
-    properties:
-      token:
-        type: string
   TransactionsResponse:
     type: object
     properties:
